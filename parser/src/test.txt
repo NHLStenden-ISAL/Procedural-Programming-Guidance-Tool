@@ -1,0 +1,67 @@
+package com.nhlstenden.isalab.pgt.antlrtest;
+
+/**
+ * @desc Multiline
+ * Description External for class Program
+ * @inv Invariant External
+ */
+public class Program {
+
+	/**
+	 * @desc Description Internal for class Program
+	 * @represents A
+	 * Represents
+	 * Rule
+	 */
+	
+	/**
+	 * @desc Internal Description for static final field CONSTANT
+	 * @inv INVARIANT
+	 * @represents Is allowed here
+	 */
+	private static final String CONSTANT = "test";
+
+	/**
+	 * @desc test for method anotherMethod
+	 **/
+	public void anotherMethod() {
+		/**
+		 * @desc Internal Specification for method anotherMethod
+		 * @sub HappyPath {
+		 * @desc ription
+		 * @requires Requirements
+		 * @ensures Ensurements
+		 * }
+		 */
+	
+	}
+
+	/**@desc Description single line for static method main */
+	public static void main(String[] args) {
+		/**
+	 	 * @
+		 * @desc Description
+	 	 * Multi
+	 	 * Line for static method main
+		 */
+	}
+
+	public static void methodWithoutSpecification() {
+
+	}
+
+	/**
+	 * @desc Description external static method methodWithExternalSpecification
+	 */
+	public static void methodWithExternalSpecification() {
+		
+	}
+
+	public static void methodWithInternalSpecification() {
+		/**
+		 * @desc Description for internal specification of static method methodWithInternalSpecification.
+		 */
+	}
+
+
+}

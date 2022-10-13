@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "PGT",
+  "scopeName": "source.pgt",
+  "injectionSelector": "L:comment.block",
+  "patterns": [
+    {
+      "include": "#specification"
+    }
+  ],
+  "repository": {
+    "specification": {
+      "begin": "(?<=/\\*\\*)(\\s|\\*)*",
+      "end": "(?=\\*/)",
+      "patterns": [
+        {
+          "include": "#subspecification"
+        },
+        {
+          "include": "#specification-rule"
+        }
+      ]
+    },
+    "subspecification": {
+      "begin": "(?=\\W)(@sub)(?=\\W)\\s*([ \\w]+)\\s*({)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.subspecification.pgt"
+        },
+        "2": {
+          "name": "entity.name.namespace.subspecification.pgt"
+        },
+        "3": {
+          "name": "punctuation.bracket.curly.pgt"
+        }
+      },
+      "end": "}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.bracket.curly.pgt"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#comment-block-prefix"
+        },
+        {
+          "include": "#comment-block-end"
+        },
+        {
+          "include": "#specification-rule"
+        }
+      ],
+      "name": "meta.embedded.subspecification.pgt"
+    },
+    "specification-rule": {
+      "begin": "(?=\\W)(@(desc|inv|represents|requires|ensures|signals|assignable|pure))(?=\\W)",
+      "beginCaptures": {
+        "1": {
+          "name": "keyword.other.specification-rule.pgt"
+        }
+      },
+      "end": "(?=@)|(?=\\*/)|(?=})",
+      "patterns": [
+        {
+          "include": "#comment-block-prefix"
+        },
+        {
+          "include": "#comment-block-end"
+        },
+        {
+          "match": "[^@{}*]|\\*(?!/)",
+          "name": "support.constant.property-value.pgt"
+        }
+      ],
+      "name": "meta.embedded.specification-rule.pgt"
+    },
+    "comment-block-prefix": {
+      "match": "^([ *](?!/))+",
+      "name": "comment.block.pgt"
+    },
+    "comment-block-end": {
+      "match": "(\\*/)",
+      "name": "comment.block.pgt"
+    }
+  }
+}

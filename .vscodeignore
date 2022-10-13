@@ -1,0 +1,15 @@
+# Ignore vscode settings
+.vscode/**
+.vscode-test/**
+
+# Ignore source files
+parser/**
+src/**
+
+# Ignore development files
+.gitignore
+.yarnrc
+**/tsconfig.json
+**/.eslintrc.json
+**/*.map
+**/*.ts

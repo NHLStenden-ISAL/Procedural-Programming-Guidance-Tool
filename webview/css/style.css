@@ -1,0 +1,83 @@
+body{
+    background-color: var(--vscode-editor-background);
+    overflow-y: hidden;
+}
+
+.class > .methods, .class > .attributes, .methods > .method, .sub > .rule {
+    margin-left: 5%;
+}
+.descriptionSpan{
+    margin-left: 0%;
+}
+.sub{
+    margin-top: 3%;
+}
+.methodName, .attributeName, .className{
+    margin-bottom: 3%;
+    font-weight: normal;
+}
+
+.Errors, #internal{
+    color: var(--vscode-editorError-foreground);
+    background-color: var(--vscode-sideBar-background);
+}
+.Hints, #external{
+    color: var(--vscode-charts-green);
+    background-color: var(--vscode-sideBar-background);
+}
+.Warnings{
+    color: var(--vscode-editorWarning-foreground);
+    background-color: var(--vscode-sideBar-background)
+
+}
+.Information{
+    color: var(--vscode-editorInfo-foreground);
+    background-color: var(--vscode-sideBar-background);
+}
+
+#external, #internal{
+    background-color: var(--vscode-sideBar-background) !important;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+    box-shadow: inset 0 -2px 0 var(--vscode-editor-background);
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.btnVS{
+    background-color: var(--vscode-button-background);
+    color: var(--vscode-button-foreground);
+    border-radius: 0%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    border: none;
+}
+.btn:hover{
+    background-color: var(--vscode-button-hoverBackground);
+    color: var(--vscode-button-foreground);
+}
+
+h3{
+    color: var(--vscode-foreground);
+}
+
+.halfHeight{
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.maxHeight{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#navigation{
+    border-color: none;
+    border-width: 2px;
+}
+
+.bold{
+    font-weight: bold;
+    margin-bottom: 3%;
+}
